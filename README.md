@@ -1,4 +1,4 @@
-The CryptoPals Challenges - [[cryptopals.com]]
+The CryptoPals Challenges - www.cryptopals.com
 
 * Problem Set 1 [6/8]
    - [X] p01 - Convert hex to base64
