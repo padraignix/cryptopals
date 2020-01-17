@@ -1,6 +1,6 @@
-* The CryptoPals Challenges - [[cryptopals.com]]
+The CryptoPals Challenges - [[cryptopals.com]]
 
-** Problem Set 1 [6/8]
+* Problem Set 1 [6/8]
    - [X] p01 - Convert hex to base64
    - [X] p02 - Fixed XOR
    - [X] p03 - Single-byte XOR cipher
