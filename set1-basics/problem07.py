@@ -21,6 +21,8 @@ https://pycryptodome.readthedocs.io/en/latest/src/introduction.html
 
 import base64
 import binascii
+import sys
+sys.path.insert(1, '../libraries')
 import set1lib as lib
 
 def main():

@@ -15,6 +15,8 @@ Remember that the problem with ECB is that it is stateless and deterministic; th
 https://pycryptodome.readthedocs.io/en/latest/src/introduction.html
 
 '''
+import sys
+sys.path.insert(1, '../libraries')
 import set1lib as lib
 
 def main():

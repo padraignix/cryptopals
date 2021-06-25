@@ -7,7 +7,8 @@ The string:
 Should produce:
 SSdtIGtpbGxpbmcgeW91ciBicmFpbiBsaWtlIGEgcG9pc29ub3VzIG11c2hyb29t
 '''
-
+import sys
+sys.path.insert(1, '../libraries')
 import set1lib as lib
 
 def main():

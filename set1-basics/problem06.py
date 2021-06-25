@@ -28,6 +28,8 @@ For each block, the single-byte XOR key that produces the best looking histogram
 
 import base64
 import binascii
+import sys
+sys.path.insert(1, '../libraries')
 import set1lib as lib
 
 def main():

@@ -7,6 +7,8 @@ Find it.
 (Your code from #3 should help.)
 '''
 import binascii
+import sys
+sys.path.insert(1, '../libraries')
 import set1lib as lib
 
 def main():

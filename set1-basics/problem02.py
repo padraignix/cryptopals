@@ -10,7 +10,8 @@ after hex decoding, and when XOR'd against:
 should produce:
 746865206b696420646f6e277420706c6179
 '''
-
+import sys
+sys.path.insert(1, '../libraries')
 import set1lib as lib
 import binascii
 

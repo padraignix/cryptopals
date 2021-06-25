@@ -13,6 +13,8 @@ a282b2f20430a652e2c652a3124333a653e2b2027630c692b20283165286326302e27282f
 Encrypt a bunch of stuff using your repeating-key XOR function. Encrypt your mail. Encrypt your password file. Your .sig file. Get a feel for it. I promise, we aren't wasting your time with this.
 '''
 import binascii
+import sys
+sys.path.insert(1, '../libraries')
 import set1lib as lib
 
 def main():
