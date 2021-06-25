@@ -1,4 +1,7 @@
 import base64
+from Crypto.Cipher import AES
+from Crypto.Util import Padding
+import itertools
 
 #English language character frequency analysis
 CHARACTER_FREQ = {
@@ -106,3 +109,25 @@ def determine_key_based_on_len(candidate_size, data):
         topres = single_char_xor_brute(block)
         key += chr(topres['key']).encode()
     return key
+
+def aes_cbc_decode(key, ciphertext, style_p, size_b ):
+
+    cipher = AES.new(key, AES.MODE_ECB)
+
+    data = base64.b64decode(ciphertext)
+    data_padded = Padding.pad(data, size_b, style=style_p)
+    plaintext = cipher.decrypt(data_padded)
+    #plaintext_unpad = Padding.unpad(plaintext, size_b)
+    
+    return plaintext
+
+def determine_aes_cbc(data,key_size):
+    candidate = (-1, 0)
+    for j in range(len(data)):
+            count = 0
+            blocks = [data[j][i:i+key_size] for i in range(0, len(data[j]), key_size)]
+            for a, b in itertools.combinations(blocks, 2):
+                if a == b:
+                    count += 1
+            candidate = max(candidate, (j, count), key=lambda c: c[1])
+    return candidate
