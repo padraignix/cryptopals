@@ -1,7 +1,5 @@
-import base64
 from Crypto.Cipher import AES
 from Crypto.Util import Padding
-import itertools
 
 def padding_func(data, size_b):
     data_padded = Padding.pad(data, size_b)
