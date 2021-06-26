@@ -10,7 +10,7 @@ The CryptoPals Challenges - www.cryptopals.com
    - [X] p07 - AES in ECB mode
    - [X] p08 - Detect AES in ECB mode
 
-* Problem Set 2 - Block Crypto [0/8]
+* Problem Set 2 - Block Crypto [2/8]
    - [X] p09 - Implement PKCS#7 padding
    - [X] p10 - Implement CBC mode
    - [ ] p11 - An ECB/CBC detection oracle
