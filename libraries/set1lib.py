@@ -110,18 +110,18 @@ def determine_key_based_on_len(candidate_size, data):
         key += chr(topres['key']).encode()
     return key
 
-def aes_cbc_decode(key, ciphertext, style_p, size_b ):
+def aes_ecb_decrypt(key, ciphertext, style_p, size_b ):
 
     cipher = AES.new(key, AES.MODE_ECB)
 
     data = base64.b64decode(ciphertext)
     data_padded = Padding.pad(data, size_b, style=style_p)
     plaintext = cipher.decrypt(data_padded)
-    #plaintext_unpad = Padding.unpad(plaintext, size_b)
+    #plaintext_unpad = Padding.unpad(plaiccccccccccccccccccccccccccntext, size_b)
     
     return plaintext
 
-def determine_aes_cbc(data,key_size):
+def determine_aes_ecb(data,key_size):
     candidate = (-1, 0)
     for j in range(len(data)):
             count = 0

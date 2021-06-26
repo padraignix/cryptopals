@@ -34,7 +34,7 @@ def main():
     #print(f"{ciphertext}")
     
     key = b'YELLOW SUBMARINE'
-    plaintext = lib.aes_cbc_decode(key, ciphertext, "pkcs7", 16)
+    plaintext = lib.aes_ecb_decrypt(key, ciphertext, "pkcs7", 16)
     
     print(f"{plaintext}")
 

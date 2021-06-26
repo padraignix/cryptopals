@@ -25,7 +25,7 @@ def main():
     ciphertexts = [bytes.fromhex(line.strip()) for line in f]
     f.close()
 
-    result = lib.determine_aes_cbc(ciphertexts,16)
+    result = lib.determine_aes_ecb(ciphertexts,16)
     print(f"{result}")
    
 if __name__ == "__main__":
